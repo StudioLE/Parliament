@@ -1,0 +1,20 @@
+{
+  "globalstrict": true,
+  "globals": {
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "module": false,
+    "inject": false,
+    "console": false,
+    "document": false,
+    "_": false,
+    "async": false,
+    "require": false,
+    "process": false,
+    "d3": false
+  },
+  "asi": true
+}
