@@ -6,7 +6,12 @@ $(document).ready(function() {
 
   var step = 0
   var title = 'State Opening of Parliament'
-  var bg = 'img/00-palace-of-westminster.jpg'
+  var bg = {
+    author: 'Kurt Bauschardt',
+    url: 'https://www.flickr.com/photos/kurt-b/8037548736/in/album-72157631585839214/',
+    license: 'CC BY-SA 2.0',
+    src: 'img/00-palace-of-westminster.jpg'
+  }
 
   var nodes = [
     {
@@ -218,8 +223,9 @@ $(document).ready(function() {
 
     $('#title').html('<span>0' + step + '</span> ' + title)
     
-    $('<img src="'+ bg +'">').load(function() {
-      $('body').css('background-image', 'url(' + bg + ')')
+    $('<img src="'+ bg.src +'">').load(function() {
+      $('body').css('background-image', 'url(' + bg.src + ')')
+      $('#credit').html('<a href="' + bg.url + '">' + bg.author + '</a>')
     })
     
 
@@ -270,50 +276,95 @@ $(document).ready(function() {
       case 1:
         title = 'Searching of the cellars'
         changeTarget('yeomen', 'basement')
-        bg = 'img/01-yeomen.jpg'
+        bg = {
+          author: 'Catherine Bebbington',
+          url: 'https://www.flickr.com/photos/uk_parliament/7165403542/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/01-yeomen.jpg'
+        }
       break;
       case 2:
         title = 'Assembly of Peers and Commons'
         changeTarget('lords', 'lords-chamber')
         changeTarget('commons', 'commons-chamber')
-        bg = 'img/02-commons.jpg'
+        bg = {
+          author: 'Catherine Bebbington',
+          url: 'https://www.flickr.com/photos/uk_parliament/4642915654',
+          license: 'CC BY-NC-ND 2.0',
+          src: 'img/02-commons.jpg'
+        }
       break;
       case 3:
         title = 'Delivery of Parliamentary hostage'
         changeTarget('hostage', 'buckingham-palace')
-        bg = 'img/03-buckingham-palace.jpg'
+        bg = {
+          author: 'Datmater',
+          url: 'https://www.flickr.com/photos/datmater/4489901093/',
+          license: 'CC BY-NC-ND 2.0',
+          src: 'img/03-buckingham-palace.jpg'
+        }
       break;
       case 4:
         title = 'Arrival of Royal Regalia'
         changeTarget('regalia', 'royal-gallery')
-        bg = 'img/04-regalia.jpg'
+        bg = {
+          author: 'Roger Harris',
+          url: 'https://www.flickr.com/photos/uk_parliament/7165701404/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/04-regalia.jpg'
+        }
       break;
       case 5:
         title = 'Arrival of the Sovereign and assembly of Parliament'
         changeTarget('monarch', 'lords-chamber')
-        bg = 'img/05-monarch.jpg'
+        bg = {
+          author: 'The British Monarchy',
+          url: 'https://www.flickr.com/photos/britishmonarchy/14345165255',
+          license: '',
+          src: 'img/05-monarch.jpg'
+        }
       break;
       case 6:
         title = 'Royal summons to the Commons'
         changeTarget('blackrod', 'commons-chamber')
-        bg = 'img/06-blackrod.jpg'
+        bg = {
+          author: 'Catherine Bebbington',
+          url: 'https://www.flickr.com/photos/uk_parliament/7165939138/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/06-blackrod.jpg'
+        }
       break;
       case 7:
         title = 'Procession of the Commons'
         changeTarget('commons', 'lords-chamber')
         changeTarget('blackrod', 'lords-chamber')
-        bg = 'img/07-procession.jpg'
+        bg = {
+          author: 'Catherine Bebbington',
+          url: 'https://www.flickr.com/photos/uk_parliament/7166564412/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/07-procession.jpg'
+        }
       break;
       case 8:
         title = 'Delivery of the speech'
-        bg = 'img/08-speech.jpg'
+        bg = {
+          author: 'Roger Harris',
+          url: 'https://www.flickr.com/photos/uk_parliament/7165865936/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/08-speech.jpg'
+        }
         // changeTarget('yeomen', 'basement')
       break;
       case 9:
         title = 'Departure of monarch'
         changeTarget('monarch', 'buckingham-palace')
         changeTarget('commons', 'commons-chamber')
-        bg = 'img/09-departure.jpg'
+        bg = {
+          author: 'Roger Harris',
+          url: 'https://www.flickr.com/photos/uk_parliament/7165998378/in/album-72157629647476536/',
+          license: 'CC BY-NC 2.0',
+          src: 'img/09-departure.jpg'
+        }
       break;
       default:
         location.reload()
