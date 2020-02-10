@@ -8,6 +8,7 @@ services:
       - ./build:/usr/share/nginx/html
     labels:
       domain: parliament.studiole.uk
+    restart: unless-stopped
     networks:
       - traefik
 networks:
